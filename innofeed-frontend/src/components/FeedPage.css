@@ -1,0 +1,151 @@
+/* src/components/FeedPage.css */
+.feed-page-container {
+    padding: 2rem;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+.user-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.user-info h3 {
+    margin: 0;
+    color: #333;
+    font-size: 1.5rem;
+}
+
+.user-info button {
+    padding: 0.6rem 1.5rem;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.user-info button:hover {
+    background-color: #c82333;
+}
+
+.preferences-section {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.preferences-section h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.domain-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.domain-list label {
+    background-color: #e9ecef;
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    font-size: 0.9rem;
+    user-select: none;
+}
+
+.domain-list label:hover {
+    background-color: #cfd4da;
+    transform: translateY(-2px);
+}
+
+.domain-list input[type="checkbox"] {
+    margin-right: 0.5rem;
+    cursor: pointer;
+}
+
+.domain-list input[type="checkbox"]:checked + span {
+    font-weight: 600;
+}
+
+.save-button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.save-button:hover {
+    background-color: #218838;
+}
+
+.save-button:active {
+    transform: translateY(1px);
+}
+
+.error {
+    color: #dc3545;
+    text-align: center;
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 4px;
+}
+
+/* Loading state */
+.feed-page-container p {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+    font-size: 1rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .feed-page-container {
+        padding: 1rem;
+    }
+
+    .user-info {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .user-info h3 {
+        font-size: 1.2rem;
+    }
+
+    .preferences-section {
+        padding: 1rem;
+    }
+
+    .domain-list {
+        gap: 0.5rem;
+    }
+
+    .domain-list label {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+}
