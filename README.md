@@ -64,13 +64,13 @@ source venv/bin/activate
 pip install -r requirements.txt
 
 # Create .env file with your configuration
-# DB_USER=your_db_user
-# DB_PASSWORD=your_db_password
-# DB_HOST=localhost
-# DB_PORT=5432
-# DB_NAME=innofeed
-# HF_API_KEY=your_huggingface_key
-# SERPAPI_KEY=your_serpapi_key
+ DB_USER=your_db_user
+ DB_PASSWORD=your_db_password
+ DB_HOST=localhost
+ DB_PORT=5432
+ DB_NAME=innofeed
+ HF_API_KEY=your_huggingface_key
+ SERPAPI_KEY=your_serpapi_key
 
 # Run data ingestion (first time)
 python ingest.py
@@ -107,14 +107,4 @@ GET /feed/{user_id} - Get personalized feed
 🔄 Data Ingestion
 Run the ingestion script to fetch latest papers and patents:
 bashpython ingest.py
-🤝 Contributing
-Contributions are welcome! Please feel free to submit a Pull Request.
-📝 License
-This project is licensed under the MIT License.
-👨‍💻 Author
-Your Name - GitHub Profile
-🙏 Acknowledgments
 
-arXiv for research papers
-Google Patents for patent data
-HuggingFace for NLP models
