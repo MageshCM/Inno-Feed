@@ -1,110 +1,114 @@
+### InnoFeed – AI-Powered Patent & Research Feed Platform
 
-InnoFeed - AI-Powered Research Feed
-An intelligent research paper and patent discovery platform that delivers personalized feeds based on user interests.
-🚀 Features
+A personalized, AI-driven feed that aggregates and summarizes the latest patents and research papers across selected technology domains, enabling users to stay updated without manual searching.
 
-Personalized Feed: Get papers and patents based on your selected domains
-Multi-Source Integration:
+### About
 
-arXiv papers with full metadata
-Google Patents with detailed classifications
+InnoFeed is an intelligent web platform designed to deliver domain-specific feeds of newly published patents and research articles. The system integrates data from Lens.org (for patents) and arXiv (for research papers), processes them using NLP pipelines, and generates concise summaries tailored to the user’s preferences.
 
+Traditional research discovery requires time-consuming searches across multiple platforms. InnoFeed resolves this by automating data ingestion, classification, summarization, and feed generation—ensuring researchers, students, and innovators receive timely and relevant insights with minimal effort.
 
-Rich Details:
+### Features
 
-PDF downloads
-Citation counts
-Patent thumbnails
-DOI links
+AI-powered summarization using transformer-based NLP models
 
+Automated patent and research ingestion from Lens.org & arXiv
 
-User Authentication: Secure login and registration
-Domain Preferences: AI, Robotics, Quantum Computing, Genetics, Cybersecurity, Blockchain
+Domain-based classification using custom NLP pipelines
 
-🛠️ Tech Stack
-Backend
+Clean, personalized feed interface for each user
 
-FastAPI: High-performance Python web framework
-PostgreSQL: Relational database
-SQLAlchemy: ORM for database operations
-bcrypt: Password hashing
-HuggingFace API: Text summarization
+High scalability with asynchronous data fetching (HTTPX)
+
+Secure authentication using Supabase Auth
+
+Cloud-ready architecture with backend on Render and frontend on Vercel
+
+PostgreSQL database on Supabase (free tier)
+
+### Requirements
+Operating System
+
+Compatible with 64-bit systems such as Windows 10/11, Ubuntu, or macOS.
+
+Development Environment
+
+Python 3.10+ for backend development
+
+Node.js 18+ if using React + Tailwind for the frontend
+
+Backend Framework
+
+FastAPI for scalable API development
+
+HTTPX for async data ingestion
+
+NLP & Machine Learning
+
+HuggingFace Transformers
+
+SentencePiece / Tokenizers
+
+scikit-learn for domain classification
+
+Database & Authentication
+
+Supabase (PostgreSQL, Auth, Storage)
 
 Frontend
 
-React: UI library
-Vite: Build tool
-CSS: Custom styling
+Streamlit or React + Tailwind CSS
 
-📋 Prerequisites
+Additional Dependencies
 
-Python 3.8+
-Node.js 16+
-PostgreSQL database
-HuggingFace API key (for summarization)
-SerpAPI key (for patent fetching)
+Uvicorn
 
-⚙️ Installation
-1. Clone the repository
-bashgit clone https://github.com/yourusername/innofeed.git
-cd innofeed
-2. Backend Setup
-bashcd innofeed-backend
+SQLModel / SQLAlchemy
 
-# Create virtual environment
-python -m venv venv
+python-dotenv
 
-# Activate virtual environment
-# Windows:
-venv\Scripts\activate
-# Mac/Linux:
-source venv/bin/activate
+arXiv API
 
-# Install dependencies
-pip install -r requirements.txt
+Lens.org API integration
 
-# Create .env file with your configuration
- DB_USER=your_db_user
- DB_PASSWORD=your_db_password
- DB_HOST=localhost
- DB_PORT=5432
- DB_NAME=innofeed
- HF_API_KEY=your_huggingface_key
- SERPAPI_KEY=your_serpapi_key
+Version Control
 
-# Run data ingestion (first time)
-python ingest.py
+Git for collaboration and repository management
 
-# Start backend server
-uvicorn main:app --reload
-3. Frontend Setup
-bashcd innofeed-frontend
+IDE
 
-# Install dependencies
-npm install
+Suitable options: VSCode, PyCharm, WebStorm
+### System Architecture
+<img width="833" height="439" alt="image" src="https://github.com/user-attachments/assets/3f09e3d7-f854-4af9-8f9e-1f55a4e035a4" />
 
-# Create .env file
-# VITE_API_URL=http://localhost:8000
 
-# Start development server
-npm run dev
-🗄️ Database Schema
-Tables
+### Workflows
+1. Data Ingestion Workflow
+API Sources → Fetch New Records → Clean & Normalize → Store in DB
 
-users: User authentication
-domains: Research domains
-items: Papers and patents
-user_domain_preferences: User interests
+2. NLP Summarization & Classification Pipeline
+Raw Text → Tokenization → Transformer Model → Summary Output
+                          → Domain Classifier → Category Tag
 
-📚 API Endpoints
+3. User Feed Generation Workflow
+User Login → Domain Selection → Query Latest Items → Display Feed → Read Summaries
 
-POST /register - Register new user
-POST /login - User login
-GET /domains - Get all domains
-POST /set-preferences/{user_id} - Update user preferences
-GET /feed/{user_id} - Get personalized feed
+### Output
+<img width="785" height="469" alt="image" src="https://github.com/user-attachments/assets/bab67a48-c178-4d3f-b365-eaafc24b1958" />
 
-🔄 Data Ingestion
-Run the ingestion script to fetch latest papers and patents:
-bashpython ingest.py
+
+### Results and Impact
+
+InnoFeed improves research efficiency by automating repetitive search tasks.
+It benefits:
+
+Students
+
+Researchers
+
+Innovators
+
+Patent analysts
+
+The platform enhances discovery workflows and reduces cognitive load, contributing to faster innovation cycles.
 
